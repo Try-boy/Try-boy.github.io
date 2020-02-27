@@ -1,0 +1,16 @@
+
+body{
+   background: #22313f;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+ }
+.txt{
+    font-size: 15px;
+    letter-spacing: 2px;
+    color:white;
+    margin-left: 20%;
+    margin-top: 5%;
+ }
+ .time{
+    font-size: 20px;
+ }

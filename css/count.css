@@ -1,0 +1,251 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.div{
+    position: absolute;
+    width: 想要的网页背景宽度;
+    height: 想要的网页背景长度;
+    top:0;
+    left:50%;
+    margin-left:-（想要的网页背景宽度的一半） ;  //关键
+}
+/* 背景 */
+ #sky{
+    background-image: url(../image/1.png);
+    background-size: 100% 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: bac 60s ease-in-out infinite;
+    -webkit-animation: bac 60s ease-in-out infinite;
+    animation-direction: alternate;
+    background-attachment:fixed;
+ }
+  @keyframes bac{
+       0%{
+          background-image: url(../image/1.jpg);
+          background-size: 100% 100%;
+       }
+       50%{
+          background-image: url(../image/3.jpg);
+          background-size: 100% 100%;
+       }
+       100%{
+          background-image: url(../image/8.png);
+          background-size: 100% 100%;
+       }
+    }
+ a{
+text-decoration:none; 
+ }
+ /* 导航栏 */
+.tec{
+    position: absolute;
+    left: 3%;
+    top: 25%;
+    border: 5px solid  #333;
+}
+.tec li{
+    list-style-type:none;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: slategrey;
+} 
+.tec li a{
+    color:white; 
+    font-size: 40px;
+}
+.tec li a:hover{
+    background-color: black;
+ }
+ /* 3d方块 */
+.cube{
+    position: fixed;
+    left:40% ;
+    top: 20%;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    animation: rot ;
+    -webkit-animation: rot  8s ease-in-out infinite;
+}
+.cube div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    opacity:0.95;
+    
+}
+/* 前 */
+.cube .img1{
+    background-image: url(../image/c1.jpg);
+    transform: translateZ(200px);
+    -webkit-transform: translateZ(200px);
+    -moz-transform: translateZ(200px);
+    -ms-transform: translateZ(200px);
+    -o-transform: translateZ(200px);
+}
+/* 右 */
+.cube .img2{
+    background-image: url(../image/c2.jpg);
+    transform: rotateY(90deg) translateZ(200px);
+    -webkit-transform: rotateY(90deg) translateZ(200px);
+    -moz-transform: rotateY(90deg) translateZ(200px);
+    -ms-transform: rotateY(90deg) translateZ(200px);
+    -o-transform: rotateY(90deg) translateZ(200px);
+}
+/* 左 */
+.cube .img3{
+    background-image: url(../image/c3.jpg);
+    transform: rotateY(-90deg) translateZ(200px);
+    -webkit-transform: rotateY(-90deg) translateZ(200px);
+    -moz-transform: rotateY(-90deg) translateZ(200px);
+    -ms-transform: rotateY(-90deg) translateZ(200px);
+    -o-transform: rotateY(-90deg) translateZ(200px);
+}
+/*  下*/
+.cube .img4{
+    background-image: url(../image/c4.jpg);
+    transform: rotateX(90deg) translateZ(200px);
+    -webkit-transform: rotateX(90deg) translateZ(200px);
+    -moz-transform: rotateX(90deg) translateZ(200px);
+    -ms-transform: rotateX(90deg) translateZ(200px);
+    -o-transform: rotateX(90deg) translateZ(200px);
+}
+/* 上 */
+.cube .img5{
+    background-image: url(../image/c5.jpg);
+    transform: rotateX(-90deg) translateZ(200px);
+    -webkit-transform: rotateX(-90deg) translateZ(200px);
+    -moz-transform: rotateX(-90deg) translateZ(200px);
+    -ms-transform: rotateX(-90deg) translateZ(200px);
+    -o-transform: rotateX(-90deg) translateZ(200px);
+}
+/* 后 */
+.cube .img6{
+    background-image: url(../image/c6.jpg);
+    transform: rotateY(180deg) translateZ(200px);
+    -webkit-transform: rotateY(180deg) translateZ(200px);
+    -moz-transform: rotateY(180deg) translateZ(200px);
+    -ms-transform: rotateY(180deg) translateZ(200px);
+    -o-transform: rotateY(180deg) translateZ(200px);
+}
+@keyframes rot{
+    0%{
+    transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+    -o-transform: rotateX(0deg) rotateY(0deg);
+}
+20%{
+    transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    -o-transform: rotateY(-90deg);
+}
+40%{
+ transform: rotateX(-90deg);
+ -webkit-transform: rotateX(-90deg);
+ -moz-transform: rotateX(-90deg);
+ -ms-transform: rotateX(-90deg);
+ -o-transform: rotateX(-90deg);
+}
+60%{
+    transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+}
+80%{
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+}
+100%{
+    transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+    -o-transform: rotateX(0deg) rotateY(0deg);
+}
+}
+
+ /* 文章样式 */
+ .artical{
+        position: absolute;
+        width:60%;
+        height: 100%;
+        top: 15%;
+        left: 28%;
+        background-color: floralwhite;
+        opacity: 0.8;
+ }
+ .artical .html{
+     width: 90%;
+     height: 18%; 
+     left: 3%;
+     background-color:cyan;
+ }
+ .picture{
+     position: absolute;
+     width: 18%;
+     height:85%;
+     /* border: 1px solid whitesmoke; */
+     top: 5%;
+     left:1%;
+ }
+  .link .pic{
+     width: 100%;
+     height: 100%;
+ }
+  .biaoti{
+      position: absolute;
+      width: 75%;
+      height: 20%;
+      left: 23%;
+      top: 3%;
+  }
+.biaoti a{
+    color: dodgerblue;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+.biaoti a:hover{
+     color:brown;
+}
+ .html .fen{
+      position: absolute;
+      width: 75%;
+      left: 23%;
+      top: 23%;
+     background-color:black;
+  }
+   .txt{
+    position: absolute;
+    width: 75%;
+    height: 60%;
+    left: 23%;
+    top:25%;
+  }
+ .time{
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    right: 5%;
+    bottom: 2%;
+ }
+ .divid{
+    height: 0.5%;
+    width: 90%;
+    left: 3%;
+    background-color:black;
+ }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于</title>
+    <link rel="stylesheet" href="css/description.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1638440_h9jv0zvqknv.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/background.js"></script>
+    <style>
+       *{
+           padding: 0;
+           margin: 0;
+       }
+       .cont{
+           position: fixed;
+           background:rgba(0,0,0,0.9);
+           top: 0;
+           left: 0;
+           bottom: 0;
+           right: 0;
+           opacity: 0.8;
+       }
+       .cont span{
+           display: inline-block;
+           width: auto;
+           position: absolute;
+           border-radius: 50%;
+           transition: all ease-in-out 100s;
+       }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <article>
+         <p class="txt">  
+         <b class="time"> 2020年2月16:</b>
+         <br>
+         &nbsp;&nbsp;&nbsp;&nbsp;这里是夏小皮个人网站
+         <br>
+                           首先，要奶一波武汉，要赶快好起来啊，疫情快点过去吧。也正是因为这个机会，让我本人有大把的时间来研究前端的一些东西,<br>
+                           本着好奇心想着学一下子，结果这些玩意都是一套一套的，一下花了小半个月的时间自己看了HTML,CSS以及JS的知识(过程还是<br>
+                           很无聊),因为自己的编程基础还可以，理解这些知识倒是不费劲，但是html里面的各个标签啦，css及css的样式，属性都只是过<br>
+                           了一遍，运用还做不到，唉，看着那些前端工程师做出的东西，咱也只能过过眼瘾了，其实我个人理解，前端这个东西对设计天赋<br>
+                           的要求还是有的，不只是你对平面一些色彩啦，模块的安排啦(当然我是天赋很差的那种，对色彩搭配什么的一窍不通，自己瞎搞<br>
+                           罢了)，还有主要能力的体现在于创造力,js语言应该是重中之重了，之前学过C、C++，Java(基础),这第一次把语言运用到实际<br>
+                           中来,都说html.css.js是前端三板斧，一套流程学下来，就感觉对于一个网页设计来说，这些知识可以做出太多的东西了,自己还<br>
+                           只是学了皮毛，现学现卖搞了这么一个也算不上静态网站的东西。对这些知识的获取太快了，只是囫囵吞枣了解大概，想通过这些<br>
+                           实际的开发知识来启发一下自己。<br>
+                           转眼自己本科第三年了，其实大多数时候还是在混，学校开设的计算机语言，数据结构，算法科目虽说都有去用心学，但学的其实<br>
+                           都很浅，就感觉整个人很废一样，对于这个专业来说，我个人的天赋一般，但好在big不讨厌，可以静下来忘我的去钻研一些知识点<br>
+                           自己不出意外的话以后就吃程序员这碗饭了，选了这个方向，就得一直学习下去，安逸是不可能了，还是挺好的，能一直保持进步就<br>
+                           好啦。<br>
+                           下一步准备把网站源码托管到GitHub上，正借助GitHub的个人网站搭建，看自己能不能坚持了，至于个人服务器，域名什么,自己<br>
+                           小破站暂时用不上，GitHub先凑合用，学无止境，贵在坚持，最后借着自己的小破站，祝自己的路越来越宽的，越走越远。                            
+         </p>
+        </article>
+        
+    </div>
+</body>
+<script>
+    var cols=['#f5d76e','#f7ca18','#f4d03f','#ececec','#ecf0f1','#a2ded0'];
+    var stars=300;
+    for(var i=0;i<=stars;i++)
+    {
+        var size=Math.random()*4;
+        var color=cols[parseInt(Math.random()*5)];
+        var span='<span style="width:'+size +'px;'+
+                               'height:'+size+'px;'+
+                                'background:'+color+';'+
+                                'box-shadow:0 0 '+Math.random()*10+'px '+color+';'+
+                                'top:'+Math.random()*100+'%;'+
+                                'left:'+Math.random()*100+'%;"></span>'
+        $('.cont').prepend(span);
+    }
+    setTimeout(function(){
+         $('.cont span').each(function(){
+            $(this).css('top',Math.random()*100+'%').css('left',Math.random()*100+'%');
+         });
+     },1);
+ </script>
+</html>
