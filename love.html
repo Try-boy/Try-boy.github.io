@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于</title>
+    <link rel="stylesheet" href="css/count.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1638440_h9jv0zvqknv.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/background.js"></script>
+    <style>
+        body{
+   background: #22313f;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+ }
+       *{
+           padding: 0;
+           margin: 0;
+       }
+       .cont{
+           position: fixed;
+           background:rgba(0,0,0,0.9);
+           top: 0;
+           left: 0;
+           bottom: 0;
+           right: 0;
+           opacity: 0.8;
+       }
+       .cont span{
+           display: inline-block;
+           width: auto;
+           position: absolute;
+           border-radius: 50%;
+           transition: all ease-in-out 100s;
+       }
+       h1{
+           color: aliceblue;
+       }
+       p{
+           color:white;
+       }
+    </style>
+</head>
+<body>
+    <div class="cont">
+    <div>
+        <p>我们在一起:</p>
+        <p id="a1"></p>
+        <p id="a2"></p>
+        <p id="a3"></p>
+        <p id="a4"></p>
+        <h1 id="sp"></h1>
+        <div class="cube">
+            <div class="img1"></div>
+            <div class="img2"></div>
+            <div class="img3"></div>
+            <div class="img4"></div>
+            <div class="img5"></div>
+            <div class="img6"></div>
+       </div>
+    </div>
+</body>
+<script>
+     var myVar = setInterval(myTimer, 1000);
+        function myTimer() {
+        var d = new Date();
+        var old = new Date("2018-8-31 19:00:00");
+        var difftime = (d-old)/1000; //计算时间差,并把毫秒转换成秒
+        var days = parseInt(difftime/86400); // 天  24*60*60*1000 
+           var hours = parseInt(difftime/3600)-24*days;    // 小时 60*60 总小时数-过去的小时数=现在的小时数 
+           var minutes = parseInt(difftime%3600/60); // 分钟 -(day*24) 以60秒为一整份 取余 剩下秒数 秒数/60 就是分钟数
+           var seconds = parseInt(difftime%60);  // 以60秒为一整份 取余 剩下秒数
+        document.getElementById("a1").innerHTML = days+"天";	
+        document.getElementById("a2").innerHTML = hours+"小时";	
+        document.getElementById("a3").innerHTML = minutes+"分钟";	
+        document.getElementById("a4").innerHTML = seconds+"秒";	
+        }
+ </script>
+ <script>
+     var cols=['#f5d76e','#f7ca18','#f4d03f','#ececec','#ecf0f1','#a2ded0'];
+    var stars=300;
+    for(var i=0;i<=stars;i++)
+    {
+        var size=Math.random()*3;
+        var color=cols[parseInt(Math.random()*5)];
+        var span='<span style="width:'+size +'px;'+
+                               'height:'+size+'px;'+
+                                'background:'+color+';'+
+                                'box-shadow:0 0 '+Math.random()*10+'px '+color+';'+
+                                'top:'+Math.random()*100+'%;'+
+                                'left:'+Math.random()*100+'%;"></span>'
+        $('.cont').prepend(span);
+    }
+    setTimeout(function(){
+         $('.cont span').each(function(){
+            $(this).css('top',Math.random()*100+'%').css('left',Math.random()*100+'%');
+         });
+     },1);
+ </script>
+ <script src="js/my.js">
+</script>
+</html>
